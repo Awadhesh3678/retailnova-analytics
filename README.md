@@ -2,88 +2,69 @@
 
 ## End-to-End Retail Business Intelligence Project
 
-RetailNova Analytics is an end-to-end retail analytics and business
-intelligence project designed to simulate the analytics environment of
-a large Indian omnichannel retailer.
+RetailNova Analytics is an end-to-end retail analytics and business intelligence project designed to simulate the analytics environment of a large Indian omnichannel retailer.
 
-The project transforms raw operational data into validated business
-KPIs, analytical SQL datasets, Stored Procedures and interactive Power BI
-dashboards.
+The project transforms raw operational data into validated business metrics, analytical SQL datasets, reusable Stored Procedures, and interactive Power BI dashboards.
 
 ---
 
-## Business Problem
+## Project Objective
 
-Retail organizations generate large volumes of customer, order, product,
-payment, shipment, return and inventory data.
+The objective is to build a complete end-to-end analytics pipeline that transforms raw retail operational data into reliable business intelligence.
 
-However, raw operational data does not directly answer management questions
-such as:
+The project follows the complete analytical lifecycle:
 
-- How much revenue are we generating?
-- Which customers drive the most value?
-- Which products and categories perform best?
-- What is the payment success rate?
-- Are deliveries meeting SLA?
-- Why are customers returning products?
-- Which products are at risk of stock-out?
+**Raw Data → MySQL → Data Validation → SQL EDA → Stored Procedures → Power BI → DAX → Business Dashboards → Business Insights**
 
-RetailNova Analytics addresses these questions through an integrated
-SQL + Power BI analytical solution.
+### Project Architecture
 
+# RetailNova Analytics
+
+## End-to-End Retail Business Intelligence Project
+
+RetailNova Analytics is an end-to-end retail analytics and business intelligence project designed to simulate the analytics environment of a large Indian omnichannel retailer.
+
+The project transforms raw operational data into validated business metrics, analytical SQL datasets, reusable Stored Procedures, and interactive Power BI dashboards.
+
+---
 
 ## Project Objective
 
-The objective is to build a complete analytics pipeline:
+The objective is to build a complete end-to-end analytics pipeline that transforms raw retail operational data into reliable business intelligence.
 
-Raw Data
-    ↓
-MySQL
-    ↓
-Data Validation
-    ↓
-SQL EDA
-    ↓
-Stored Procedures
-    ↓
-Power BI Semantic Model
-    ↓
-DAX
-    ↓
-Business Dashboards
+The project follows the complete analytical lifecycle:
 
+**Raw Data → MySQL → Data Validation → SQL EDA → Stored Procedures → Power BI → DAX → Business Dashboards → Business Insights**
 
-┌─────────────────────────────┐
-│       Source Data           │
-│ CSV / Master / Transactions │
-└──────────────┬──────────────┘
-               ↓
-┌─────────────────────────────┐
-│          MySQL              │
-│ Relational Data Model       │
-└──────────────┬──────────────┘
-               ↓
-┌─────────────────────────────┐
-│     Data Quality Checks     │
-│ Null / Duplicate / FK       │
-└──────────────┬──────────────┘
-               ↓
-┌─────────────────────────────┐
-│          SQL EDA            │
-│ Business & Trend Analysis   │
-└──────────────┬──────────────┘
-               ↓
-┌─────────────────────────────┐
-│     Stored Procedures       │
-│ Reusable Business Logic     │
-└──────────────┬──────────────┘
-               ↓
-┌─────────────────────────────┐
-│          Power BI           │
-│ Model + Power Query + DAX   │
-└──────────────┬──────────────┘
-               ↓
-┌─────────────────────────────┐
-│      Business Insights      │
-└─────────────────────────────┘
+### Project Architecture
 
+```mermaid
+flowchart TD
+
+    A["Source Data<br/>CSV / Master Data / Transaction Data"]
+    B["MySQL<br/>Relational Database"]
+    C["Data Quality & Validation<br/>Nulls / Duplicates / Referential Integrity"]
+    D["SQL EDA<br/>Business & Trend Analysis"]
+    E["Stored Procedures<br/>Reusable Business Logic"]
+    F["Power BI<br/>Data Model + Power Query"]
+    G["DAX<br/>KPIs & Analytical Measures"]
+    H["Business Dashboards"]
+    I["Business Insights<br/>Management Decision Support"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
